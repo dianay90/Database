@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Database Interactions</title>
+
+	</head>
+	<body>
+	
+        
+
+	
+	<section class="editOrder">
+	    
+	    <div class="tableTitle" id="orderTable">Edit Order </div>
+        
+        
+        
+        
+	    <label>Order Number 
+	        <input id="editOrderNumber" placeholder="Order Number" class="userInput"/>
+        
+	    </label>
+        
+
+	    <label>
+	        Customer
+	        <select id="editCustomer" placeholder="Customer"><option> </option></select>
+	    </label>
+	    <label>
+	        Address
+	        <select id="editAddress" placeholder="Address"><option> </option></select>
+	    </label>
+        
+      
+	    <label>
+	        Payment
+	        <select id="editPayment" placeholder="Payment"><option> </option></select>
+	    </label>
+       
+        
+	   <!--<input id="editPayment" placeholder="pay Number" class="userInput"/>--> 
+
+	    <label> Date 
+	    <input id="editDate" placeholder="Date" type="date" class="userInput"/>
+        
+
+	    </label>
+
+
+	    <button onclick="editOrderSubmit()"> Submit </button>
+
+	</section>
+	
+      <!--
+     
+	<form method = "get" style="display:none;" id = "edit_order_form">
+			<fieldset>
+				<legend>Edit Order</legend>
+				<fieldset>
+					<label>Order number: <input type = "text" id = "edit_order_number"> placeholder= "Order Number"</label>
+				</fieldset>
+				<fieldset>
+					<label>Customer: <select id = "edit_order_customer"><option>Test</option></select>
+				</fieldset>
+				<fieldset>
+					<label>Address: <select id = "edit_order_address"><option>Test</option></select>
+				</fieldset>
+				<fieldset>
+					<label>Date: <input type = "date" id = "edit_order_date" value="2017-12-01"></label>
+				</fieldset>
+				<fieldset>
+					<label>Payment: <select id = "edit_order_payment"><option>Test</option></select>
+				</fieldset>
+				<fieldset>
+					<input id = "editorder" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+	-->
+		
+		<script src = "editOrder.js"></script>
+	</body>
+</html>

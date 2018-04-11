@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Database Interactions</title>
+
+	</head>
+	<body>
+	
+	<button id = "addproduct" type = "button">Add Product</button>
+	<button id = "addaddress" type = "button">Add Address</button>
+	<button id = "addcustomer" type = "button">Add Customer</button>
+	<button id = "addorder" type = "button">Add Order</button>
+	<button id = "addpayment" type = "button">Add Payment</button>
+	<button id = "addorderproducts" type = "button">Add Product to Order</button>
+	<!-- <button id = "addOrderProduct" type = "button">Add product to order</button> -->
+		
+		<form method = "get" style="display:none;" id = "product_form">
+			<fieldset>
+				<legend>Add Product</legend>
+				<fieldset>
+					<label>Name: <input type = "text" id = "product_name"></label>
+				</fieldset>
+				<fieldset>
+					<label>Type: <input type = "text" id = "product_type"></label>
+				</fieldset>
+				<fieldset>
+					<label>Quantity: <input type = "number" id = "product_quantity"></label>
+				</fieldset>
+				<fieldset>
+					<label>Description: <input type = "text" id = "product_description"></label>
+				</fieldset>
+				<fieldset>
+					<label>Price: <input type = "number" id = "product_price"></label>
+				</fieldset>
+				<fieldset>
+					<input id = "insertproduct" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+		
+		<form method = "get" style="display:none;" id = "address_form">
+			<fieldset>
+				<legend>Add Address</legend>
+				<fieldset>
+					<label>Street: <input type = "text" id = "address_street"></label>
+				</fieldset>
+				<fieldset>
+					<label>City: <input type = "text" id = "address_city"></label>
+				</fieldset>
+				<fieldset>
+					<label>Zip Code: <input type = "text" id = "address_zip"></label>
+				</fieldset>
+				<fieldset>
+					<label>State: <input type = "text" id = "address_state"></label>
+				</fieldset>
+				<fieldset>
+					<input id = "insertaddress" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+		<form method = "get" style="display:none;" id = "customer_form">
+			<fieldset>
+				<legend>Add Customer</legend>
+				<fieldset>
+					<label>First name: <input type = "text" id = "customer_firstname"></label>
+				</fieldset>
+				<fieldset>
+					<label>Last name: <input type = "text" id = "customer_lastname"></label>
+				</fieldset>
+				<fieldset>
+					<label>Address: <select id = "customer_address"></select>
+				</fieldset>
+				<fieldset>
+					<input id = "insertcustomer" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+		<form method = "get" style="display:none;" id = "order_form">
+			<fieldset>
+				<legend>Add Order</legend>
+				<fieldset>
+					<label>Order number: <input type = "text" id = "order_number"></label>
+				</fieldset>
+				<fieldset>
+					<label>Customer: <select id = "order_customer"></select>
+				</fieldset>
+				<fieldset>
+					<label>Address: <select id = "order_address"></select>
+				</fieldset>
+				<fieldset>
+					<label>Date: <input type = "date" id = "order_date" value="2017-12-01"></label>
+				</fieldset>
+				<fieldset>
+					<label>Payment: <select id = "order_payment"></select>
+				</fieldset>
+				<fieldset>
+					<input id = "insertorder" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+		<form method = "get" style="display:none;" id = "payment_form">
+			<fieldset>
+				<legend>Add Payment</legend>
+				<fieldset>
+					<label>Customer: <select id = "payment_customer"></select>
+				</fieldset>
+				<fieldset>
+					<label>Address: <select id = "payment_address"></select>
+				</fieldset>
+				<fieldset>
+					<label>Type: <input type = "text" id = "payment_type"></label>
+				</fieldset>
+				<fieldset>
+					<label>Number: <input type = "text" id = "payment_number"></label>
+				</fieldset>
+				<fieldset>
+					<label>Amount: <input type = "number" id = "payment_amount"></label>
+				</fieldset>
+				<fieldset>
+					<input id = "insertpayment" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+
+		<form method = "get" style="display:none;" id = "orderproducts_form">
+			<fieldset>
+				<legend>Add Product to Order</legend>
+				<fieldset>
+					<label>Order: <select id = "orderproducts_order"></select>
+				</fieldset>
+				<fieldset>
+					<label>Product: <select id = "orderproducts_product"></select>
+				</fieldset>
+				<fieldset>
+					<label>Quantity: <input type = "number" id = "orderproducts_quantity"></label>
+				</fieldset>
+				<fieldset>
+					<input id = "insertorderproducts" type = "submit" label = "Submit!">
+				</fieldset>
+			</fieldset>
+		</form>
+		
+		<br>
+		<label>Display products by type:</label> <select id = "product_types"><option value = "1">All Types</option></select>
+		<button id = "filterProducts" type = "button">Filter</button>
+		
+		<script src = "storeDatabase.js"></script>
+	</body>
+</html>
